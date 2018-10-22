@@ -11,9 +11,17 @@ function nestedTarget(){
 }
 
 function increaseRankBy(n) {
-
+  var items = document
+  .getElementById('app')
+  .querySelectorAll('ul.ranked-list li');
+  for (var i = 0; i < items.length; i++){
+    items[i].innerHTML = parseInt(items[i].innerHTML) + n
+  }
 }
 
-function deepestChild(){
-  
+function deepestChild() {
+  let node = document
+  .getElementById('app')
+  .querySelector('div#grand-node div div div div');
+  return node
 }
